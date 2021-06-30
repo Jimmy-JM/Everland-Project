@@ -180,9 +180,9 @@ public class Everland5Process {
 	}
 
 	public void haveEventCoupon(int inputEventCoupon) {
-		if(inputEventCoupon == 1) { coupon = "있음";
-		} else { coupon = "없음";
+		if(inputEventCoupon == 1) { coupon = "쿠폰적용";
+		} else { coupon = "쿠폰미적용";
 			}
-//		System.out.printf("\n%d\n", coupon);
 	}
+	
 }

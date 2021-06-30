@@ -2,9 +2,9 @@ package 에버랜드;
 
 import java.util.Scanner;
 
-public class Everland5 {
+public class Everland5 { 
 
-	public static void main(String[] args) {
+	public static void main(String[] args) { //main
 		Scanner myInput = new Scanner(System.in);
 		Everland5Process everProcess = new Everland5Process();
 		Everland5Input everInput = new Everland5Input();
@@ -28,4 +28,5 @@ public class Everland5 {
 		everOutput.output(); //출력
 		myInput.close();
 	}
+	
 }
