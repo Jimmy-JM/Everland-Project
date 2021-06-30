@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Everland5Input {
 	public Scanner myInput = new Scanner(System.in);
 	// 기본변수
-	public int useDate, order = 0, inputPreferential = 0, price = 0, manAge = 0, addOrder = 0;
+	public int useDate, order = 0, inputPreferential = 0, price = 0, manAge = 0, addOrder = 0, inputEventCoupon = 0;
 	public String preferential = "", bigSmall = "", birthday = "", ticket = "";
 	
 	public void inputDate() {
@@ -74,7 +74,7 @@ public class Everland5Input {
 	
 	public void inputBirthday() {
 		while(true) {
-			System.out.print("\n생년월일을 입력해주세요(앞의6자리) : "); 
+			System.out.print("\n생년월일을 입력해주세요\n(앞의6자리) : "); 
 			birthday = myInput.next();
 			if(birthday.length() != 6) {
 				 System.out.print("\n생년월일 6자리를 정확히 입력해주세요");
@@ -105,6 +105,13 @@ public class Everland5Input {
 			inputPreferential = myInput.nextInt();
 		 }while(inputPreferential < 1 || inputPreferential > 5);
 	}
+
+	public void inputEventCoupon() {
+		do{
+			System.out.print("할인쿠폰을 가지고 있습니까?\n(1.쿠폰있음 2.쿠폰없음) : ");
+			inputEventCoupon = myInput.nextInt();
+		 }while(inputEventCoupon < 1 || inputEventCoupon > 2);
+	}	
 	
 	public void inputAddPerson() {
 		do{

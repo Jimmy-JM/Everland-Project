@@ -8,7 +8,7 @@ public class Everland5Process {
 	public Scanner myInput = new Scanner(System.in);
 	// 기본변수
 	public int price = 0, manAge = 0;
-	public String preferential = "", bigSmall = "";
+	public String preferential = "", bigSmall = "", coupon = "";
 	
 	// 오늘 날짜 받는 형식 지정
 	public SimpleDateFormat format = new SimpleDateFormat("yyyyMMdd");
@@ -52,7 +52,7 @@ public class Everland5Process {
 	
 	public void preferticketPrice(int inputPreferential, String ticket) {
 		switch(inputPreferential) {
-		case 1: preferential = "우대사항없음";
+		case 1: preferential = "우대없음";
 			if(ticket == "A티켓") {
 			} if (bigSmall == "무료이용") {
 				price = 0;
@@ -177,5 +177,12 @@ public class Everland5Process {
 				}
 		break;
 		}
+	}
+
+	public void haveEventCoupon(int inputEventCoupon) {
+		if(inputEventCoupon == 1) { coupon = "있음";
+		} else { coupon = "없음";
+			}
+//		System.out.printf("\n%d\n", coupon);
 	}
 }
